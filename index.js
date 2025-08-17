@@ -1,9 +1,9 @@
-console.log("This is index page");
+
 // const http = require ('node:http');
 
 // const hostName = '127.0.0.1';
 
-// const port = 3000;
+
 
 
 
@@ -29,7 +29,7 @@ require('dotenv').config();
 
 const app = express ();
 
-
+const port = process.env.PORT || 3000;
 
 app.get ('/', (req, res) => {
      res.send("This is my first node web app and is if we use express the host is automatically running on local host and is better than HTTP becuase it provides strong and robust routing mechanism than the HHTP as we have to handle routing manully in HTTP")
@@ -43,6 +43,6 @@ app.get( '/status', (req, res)=>{
   res.status ( 200);
 })
 
-app.listen( process.env.PORT, () =>{
-  console.log(`server is running on port ${process.env.PORT}`);
+app.listen( port, () =>{
+  console.log(`server is running on port ${port}`);
 });
