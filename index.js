@@ -29,7 +29,7 @@ require('dotenv').config();
 
 const app = express ();
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 app.get ('/', (req, res) => {
      res.send("This is my first node web app and is if we use express the host is automatically running on local host and is better than HTTP becuase it provides strong and robust routing mechanism than the HHTP as we have to handle routing manully in HTTP")
